@@ -1,3 +1,4 @@
+// First commit
 const {app, BrowserWindow, Menu, ipcMain} = require('electron');
 const home = require("os").homedir();
 const path = require("path");
