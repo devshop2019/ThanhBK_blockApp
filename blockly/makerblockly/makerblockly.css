@@ -1,0 +1,385 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;
+}
+
+body {
+	background-color: #C5DFAB;
+	font-family: sans-serif;
+	margin: 0;
+	overflow: hidden;
+}
+
+#main_screen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#content_area {
+	top: 70px;
+	bottom: 70px;
+	left: 10px;
+	right: 10px;
+	position: absolute;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*Content Code Panel*/
+
+#content_code_wrapper {
+	padding: 0px;
+	margin: 0px;
+	top: 70px;
+	bottom: 70px;
+	right: 10px;
+	position: absolute;
+	z-index: 1;
+	font-size: 0;
+}
+
+#content_code_panel {
+	width: max-content;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	transition: right 0.1s;
+	padding: 0px;
+	margin: 0px;
+}
+
+#content_code_content {
+	padding: 0px;
+	margin: 0px;
+	width: 0px;
+	height: 100%;
+	overflow: auto;
+	transition: width 0.1s;
+	background-color: #202020;
+	color: white;
+	font: 15px arial, sans-serif;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select:text;
+	user-select:text;
+	-o-user-select:text;
+	line-height: 150%;
+	position: absolute;
+	right: 0px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#content_code_status {
+	width: 50px;
+	height: 70px;
+	background-color: #0E9447;
+	color: white;
+	cursor: pointer;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#content_code_status:hover {
+	background-color: #097335;
+}
+
+/*IDE Output Panel*/
+
+#ide_output_wrapper {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	z-index: 1;
+	box-shadow: 0 -2px 5px 2px rgba(0, 0, 0, 0.5), 0 -2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#ide_output_panel {
+	background-color: #0E9447;
+	color: white;
+	cursor: pointer;
+	padding-left: 20px;
+	width: 100%;
+	height: 50px;
+	font: bold 15px arial, sans-serif;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#ide_output_status {
+	padding: 15px 0;
+	display: inline-block;
+}
+
+#ide_output_content {
+	padding: 0 20px;
+	margin: 0px;
+	height: 0px;
+	overflow: auto;
+	transition: height 0.1s ease-out;
+	background-color: #202020;
+	color: white;
+	overflow-y: auto;
+	font: 15px arial, sans-serif;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select:text;
+	user-select:text;
+	-o-user-select:text;
+	line-height: 150%;
+}
+
+#ide_board_button {
+	background-color: #0A8446;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+#ide_board_popup {
+	position: absolute;
+	display: inline-block;
+	width: 300px;
+	right: 160px;
+}
+
+#ide_board_content{
+	display: none;
+	position: absolute;
+	background-color: #A1D18A;
+	width: 300px;
+	bottom: 50px;
+	z-index: 1;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#ide_board_content div {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+#ide_board_content div:hover {background-color: #48A854}
+
+#ide_board_popup:hover #ide_board_content {
+	display: block;
+}
+
+#ide_board_popup:hover #ide_board_button {
+	background-color: #097141;
+}
+
+#ide_port_button {
+	background-color: #0A8446;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+#ide_port_popup {
+	position: absolute;
+	display: inline-block;
+	width: 300px;
+	right: 5px;
+}
+
+#ide_port_content{
+	display: none;
+	position: absolute;
+	background-color: #A1D18A;
+	width: 150px;
+	bottom: 50px;
+	z-index: 1;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.ide_port {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;	
+	width: 150px;
+}
+
+.ide_port:hover {
+	background-color: #48A854;
+}
+	
+
+#ide_port_popup:hover #ide_port_button {
+	background-color: #097141;
+}
+
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/*Prompt Panel*/
+
+#prompt_faded {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: white;
+	background-color: black;
+	opacity: 0.8;
+	z-index: 3;
+}
+
+#prompt_panel {
+	position: absolute;
+	border-radius: 5px;
+	background-color: #C5DFAB;
+	padding: 20px;
+	z-index: 3;
+	width: 350;
+	height: max-content;
+	top: 0;
+	bottom: 200;
+	left: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#prompt_label {
+	width: 100%;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+
+#prompt_input, select {
+	width: 100%;
+	padding: 12px 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 120%;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#prompt_submit {
+	width: 35%;
+	background-color: #0E9447;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: left;
+	display: inline-block;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#prompt_submit:hover {
+	background-color: #097335;
+}
+
+#prompt_cancel {
+	width: 35%;
+	background-color: #FF3030;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+	display: inline-block;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#prompt_cancel:hover {
+	background-color: #CC1010;
+}
+
+/*Confirm Panel*/
+
+#confirm_faded {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: white;
+	background-color: black;
+	opacity: 0.8;
+	z-index: 3;
+}
+
+#confirm_panel {
+	position: absolute;
+	border-radius: 5px;
+	background-color: #C5DFAB;
+	padding: 20px;
+	z-index: 3;
+	width: 350;
+	height: max-content;
+	top: 0;
+	bottom: 200;
+	left: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#confirm_label {
+	width: 100%;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+
+#confirm_submit {
+	width: 35%;
+	background-color: #0E9447;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: left;
+	display: inline-block;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#confirm_submit:hover {
+	background-color: #097335;
+}
+
+#confirm_cancel {
+	width: 35%;
+	background-color: #FF3030;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+	display: inline-block;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#confirm_cancel:hover {
+	background-color: #CC1010;
+}
+
+/* Edit Tools*/
+/*
+.blocklyToolboxDiv {
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5), 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+	*/
+	
+.blocklyTreeLabel {
+	font-weight: bold;
+	font-style: italic;
+	font-family: Arial, Helvetica, sans-serif;
+}
